@@ -1,0 +1,138 @@
+<!-- 自動產生：請編輯 `src/locales/en/profile.json` 後執行 `npm run legal:privacy-page` -->
+
+# Privacy Policy
+
+How we collect, use, retain and protect personal data—including camera / photo‑library uploads and OCR imagery
+
+Version V1 · Revised: May 20, 2026
+
+## Relationship with the Terms of Service (EULA)
+
+> This Privacy Policy and the Terms of Service (EULA) are complementary: this Policy focuses on personal data; the EULA covers rights and obligations, risk allocation, disclaimers and dispute resolution—please read both. If you leave Japan Receipt Helper and open another app for maps or turn‑by‑turn navigation, location‑ or device‑related handling in **that third‑party application** falls primarily under that provider’s privacy terms; see also Article 9 of the EULA.
+
+
+## 1. What information do we collect (scope of data collection)
+
+- **Identifiers and login data**: If you authenticate with Sign in with Apple or another OAuth issuer, identifiers created or referenced by Supabase Authentication (such as emails or provider IDs—depending on issuer settings), display names, locale, and currency preferences.
+
+- **Common identity fields that are not collected separately at the registration level**: This application does not set ID card number, birthday, phone number, detailed address, etc. as required registration fields, nor does it actively ask you to provide such information for account verification. If words such as name or phone number appear in user content such as accounting and receipt recognition, it comes from the image or the record content you input yourself, and is not a separate field collected for identity registration.
+
+- **User-generated content and feature-derived data**: ledger rows (line items, amounts, dates, categories, merchant names, etc.); text or structured content produced after receipt imagery is recognised (which may expose whatever appears on the slip). Receipt recognition runs on our backend using third‑party cloud services (including one or more cooperating AI / image‑recognition vendors). **For each OCR request, imagery sent to those vendors is processed within that request's lifecycle and we do not attach your member display name, email, or similar OAuth identifiers as outbound labels or folder markers** (request identity stays segregated on our servers). Contracts require cooperating vendors **not to use that imagery—or content not properly anonymised—for model training, fine‑tuning, or unrelated commercial reuse**; transient storage on their side is governed by their technical documents and contracts. Ledger map pins: coordinates come from textual addresses via geocoding handled by cooperating map / geocoder partners. GPS / precise location permission is never requested and no handset GPS breadcrumbs are persisted.
+
+- **Operating system permissions for camera, photo library (album/gallery) and file access**: Only when you actively use functions that require shooting, selecting images from the photo library/album, or importing files (such as receipt image recognition, accounting, and the selection or production of thumbnails/screenshots/shared images related to accounting maps, or other related functions you enable), you will be asked for authorization according to the system prompts, and used for the images or file content required for the operation. We do not use the camera to record videos in the background, record secrets, or access the camera screen or photo album when you are not operating the relevant functions.
+
+- **Technical data and connection information**: When you use this service, within the scope required for normal connection and information security, infrastructure or server logs may include IP address, connection/request time and number, User-Agent (which can reflect the browser or App execution environment, operating system version, etc.); sensor data is only processed on the device side according to the operating system authorization when you use functions that require hardware permissions such as cameras; this application does not create separate sensor data profiles for marketing or tracking purposes. Regarding advertising identifiers (e.g., Apple IDFA): we currently do **not** embed broadly used behavioural‑analytics or ad‑network SDKs. If you complete in‑App purchases or interact with Apple App Store or RevenueCat, those providers inevitably process transactional identifiers—their contractual and privacy frameworks govern.
+
+- **Precise/real-time location (GPS)**: This app does **not** request GPS or precise‑location permission, does **not** collect or store handset GPS readings, and does **not** build a breadcrumb trail of your movements in real time. Map pins reflect text such as merchants and addresses derived from bookkeeping or receipts, converted to coordinates by geocoding. We **do not** derive positions from embedded photo metadata such as EXIF, nor assemble a mobility history from handset live location.
+
+- **Local and cache data**: Settings such as interface language and preferred currency (local currency conversion) may live in Local Storage on your device. **Japan prefecture “conquest” visit records** sync to Supabase alongside your signed‑in profile, with an optional device copy for faster loading. **Guest mode** data may remain on‑device until you sign in, then merges into your cloud account.
+
+
+## 2. How we collect information (collection method)
+
+- **Voluntary submission**: credentials issued after Sign in with Apple / OAuth approvals; handwritten ledger edits; uploads from camera / library / importer when you intentionally run OCR.
+
+- **Automatic logging and forwarding**: When you use the app (e.g. saving ledger rows or syncing), the client sends minimally necessary payloads to our entrusted cloud. To enable recognition or geocoding the backend forwards text or imagery to cooperating OCR / AI / geospatial stacks **strictly for that operation**—without unnecessary account identifiers as labels on cooperating systems. See Sections 1 and 5.
+
+- **Cookie/terminal storage**: If you access the web version with a browser, the server can send session or security cookies according to standard protocols; the application uses Local Storage and other storage interface settings and preferences, not for the purpose of tracking cross-domain advertising analysis.
+
+
+## 3. Why do we need this information (purpose of use)
+
+- **Provide and maintain core functions**: bookkeeping, FX and currencies, ledger map pins, receipt image recognition, travel tips/guides, badges and membership tiers, etc.
+
+- **Identity and security**: Confirm login identity, prevent abuse, and save your information under the account.
+
+- **Product improvement**: De-identify/aggregate accounting and other data before statistical or model improvements are made, and the original details that can identify you will not be disclosed to the public.
+
+- **Third-party models and marketing**: Aside from narrowly scoped subcontractors working under our instructions to deliver a requested feature in the smallest necessary way, we **do not** provide identifiable personal data to third parties so they may train, fine‑tune or optimise ML or generative models, nor for cold outreach, surveys, audience building or list resale. Receipt‑**OCR** partners must **not** exploit batches of slips for **model training or fine‑tuning**. Payloads routed through cooperating services remain limited to the invoked function and are subject to those providers’ terms **and this Policy.**
+
+- **Legal Compliance and Disputes**: Necessary processing to cooperate with the competent authorities or claims of rights within the scope permitted by law.
+
+- Your personal information is not sold to data intermediaries or used in a manner that is obviously inconsistent with the stated purpose; if there is any marketing or promotion in the future, prior consent will be obtained in accordance with the law or may be refused at any time, and the withdrawal method will be stated in the application or in a visible place.
+
+
+## 4. How to store and protect data (security)
+
+- **Storage location**: Personal data and the content you supply are hosted mainly by Supabase’s cloud database plus related compute/storage strata; hosted **region(s)** appear in Supabase’s public posture statements.
+
+- **Hosting environment and third-party certification (reference)**: According to Supabase’s public statement, its hosting platform has passed independent audits (including SOC 2 Type 2) and obtained information security management certifications such as ISO 27001. Actual exposure and protection are still affected by project settings, access control, and the shared responsibility model between suppliers and customers. For details, see Supabase’s official security and compliance documents.
+
+- **Transmission and encryption**: External connections preferentially use encrypted channels commonly used in the industry such as TLS/HTTPS; database and identity authentication are handled by Supabase in accordance with its security design and our access control settings. However, Internet transmission may still be affected by factors such as terminal devices, user networks (including public Wi-Fi), malicious programs or settings, so there is no guarantee that any transmission path will be absolutely free from third-party eavesdropping or tampering under any circumstances; please understand this together with the description of security measures in this chapter and elsewhere in this policy.
+
+- **De-identification**: Aggregated/de-identified data used for statistical or model training purposes, which have been removed or irreversibly de-identified, are subject to this chapter and the aforementioned purpose of use description.
+
+- **Summary of retention period**: Please also refer to "9. Data Retention and Deletion". After the account is deleted, in principle, the content linked to the account will be removed from the operating environment within a reasonable period of no more than approximately thirty (30) days (this does not apply to those that are required to be temporarily retained by law or have been anonymized).
+
+
+## 5. Third-party sharing notice (SDKs, APIs and operating partners)
+
+- For deciding the purposes behind collecting and processing personal information, **we are the controller**. Subcontractors that supply compute, recognition or infrastructure operate as processors (or analogous roles) only within the limits of our directions; although they obey their contracts and statutes, **that does not absolve us** of what we owe you for transparency or security. Sharing beyond our walls sticks to fulfilment‑of‑service necessity. **We do not furnish identifiable records** so others may pursue "model training / optimisation", market research, ad‑audience building, list resale or analogous campaigns, nor **sell** personal information to brokers.** When you use a specific feature, the following categories **may briefly handle payloads** (**minimum necessary only**):
+
+- **Identity data & cloud tenancy**: Supabase (authentication, database and blob storage among other pillars).
+
+- **Imagery and text recognition (OCR)**: To complete the recognition you requested, imagery tied to receipts is sent from our backend to cooperating cloud AI/OCR services.** Sending data is strictly limited to that recognition run.** We **do not** attach OAuth display names, emails or equivalent identifiers outward as cooperating-side folder badges.** Contracts require cooperating parties not** to reuse that imagery—or content lacking adequate de‑identification—for model training or tuning unrelated to supplying that service.** Very short-lived technical caches follow vendor specs and contractual terms.** Afterwards, operational databases ordinarily store mainly the recognised text / structured outputs (plus ledger entries you save); long-term warehousing of untouched receipt images is not the preset aim—exceptions for quotas, cybersecurity or lawful retention appear in Section **9**.
+
+- **In‑app purchases and subscriptions**: Charges flow through storefront operators such as Apple’s App Store and RevenueCat (or its SDK wherever present); treat **each storefront’s privacy notice** jointly with RevenueCat’s materials as authoritative for billing identifiers.
+
+- **Fonts and ancillary assets**: Choosing Google Fonts can leave technical telemetry consistent with Google’s practices.
+
+- **Navigation / maps you open externally**: When you deliberately launch companion apps—Google Maps cited as an illustration—whatever location or handset handling occurs rests with that publisher; revisit **Article 9 of the EULA** alongside this Policy.
+
+- **We do not** embed generic SDKs centred on behavioural analytics, ad placements or aggregated third‑party behavioural profiling.** If we materially add processors, we revise this Policy and surface major shifts in‑app.** In‑App Purchases generally flow through Apple’s App Store and RevenueCat mechanisms; proprietarily operated payment portals comparable to Green World Payments (綠界/ECPay), LINE Pay or Stripe are **not** offered today—we would enumerate future processors inside updated contractual text.
+
+
+## 6. Your rights (access, correction, deletion, and restriction)
+
+- **Access, portability, and correction**: While signed in, you may review and edit personal information and record content that the product lets you edit (subject to feature design). You may also contact us via Section 10 of this Policy and, where permitted by applicable law, request a copy of your personal data.
+
+- **Right to deletion**: You may use “Delete account” on member/account screens to request termination of the Service and deletion of information linkable to you; the app will prompt you to confirm. For scope and timing—including when geographic or coordinate‑related data may still remain—see Section 9 (“Data retention & deletion”). **Even if you delete a bookkeeping row or request erasure, that does not by itself restore recognition quota already consumed under the Terms of Service (EULA):** purchases, deduction ledgers and anti‑abuse logs may be **briefly retained in minimised form** under Section 9 and applicable law. That is separate from whether a ledger line disappears in the UI.
+
+- **Right to restrict processing and refuse use**: You may contact us at any time to request that we stop collecting, processing, or using your personal data, or to withdraw consent for particular features. Withdrawing consent or restricting use of necessary data may make some features unavailable. Where commercial communications are allowed by law, we will provide a way to opt out.
+
+- **Cross-border transfers**: To operate the Service, you understand that your personal data and bookkeeping content are hosted primarily with our entrusted cloud infrastructure (Supabase); the primary region is **Japan (Tokyo)**. Such transfers are reasonably necessary to provide the service you requested, support cloud synchronization, and perform backups. We apply required access controls and safeguards under applicable law and this Policy.
+
+
+## 7. Cookies and local storage
+
+- **Local Storage**: For language, preferences, offline use, and optional data (some items remain on device only).
+
+- **Cookies**: On the web, cookies mainly support sessions and secure sign-in flows; we do not use third-party cookies for cross-site marketing profiling. You may refuse or limit cookies via your browser; clearing or blocking cookies may sign you out and stop some web features from working normally.
+
+
+## 8. Minors and Special Protection
+
+- We do not knowingly collect personal information from children under **13** without lawful parental or guardian consent.** Many jurisdictions—e.g., COPPA in the United States—call out **under 13** as a sensitive bracket.** Taiwan (R.O.C.) lowered the age of majority to **18** in **2023**; persons **under 18 who have not married** generally have restricted legal capacity.** If you are under 18—or under the parental‑consent age where you reside—please use this Service only after a parent or legal guardian reviews and agrees to this Privacy Policy and the Terms of Service (EULA).
+
+- If you believe a child disclosed personal information without consent, or that we may have mistakenly collected information about someone below the lawful age threshold, parents or guardians may contact us via Member center → "Message the developer / report an issue", providing verifiable contact details. Upon receipt we review the facts where appropriate and erase or constrain processing within what the law allows.
+
+
+## 9. Data retention and deletion
+
+- When you actively apply to delete your account within the application, we will remove the original copy of the personal data and content linked to your account from the operating server environment within a reasonable period, in principle no more than thirty (30) calendar days, and such deletion cannot be restored through the general user interface.
+
+- To the extent necessary for compliance with regulations, accounting, auditing, information security or dispute resolution, some records may be temporarily retained for the duration of the purpose or kept after anonymization/de-identification; after the purpose is eliminated, they will be deleted or further irreversibly de-identified.
+
+- **Recognition quotas, in‑app purchases, and antifraud minimised records**: To **perform contracts** (including the Terms of Service (EULA) on recognition consumption, purchase consideration and anti‑abuse), **prevent fraud**, support **audit, tax or dispute evidence**, and cooperate with regulators where compulsory law requires, these items may persist only as **field‑limited short‑term records**—or irreversibly aggregated statistics—until the underlying purpose lapses: **in‑app purchase or point top‑up transaction references / order IDs, recognition deduction/balance journals (including timestamps and server-side corroboration), anomaly and abuse‑prevention logs, and security‑audit access traces.** Retaining them **does not** imply that deleting a bookkeeping row from the UI or invoking erasure **automatically** restores quota already consumed in line with the Terms, resets add‑on purchase hurdles, or changes storefront refunds; entitlement follows contract and platform rules—not only whether an entry remains visible.
+
+- Account deletion mainly removes data "that can identify you personally or be linked to your account"; however, location and latitude and longitude information that has been de-identified and aggregated by geocoding, location matching or statistical purposes, or has been detached from a specific account, and is public or shared by multiple people, may still exist in databases, geocoding service caches, indexes, or general geographic data generated by third-party map/geographic service processing. Such data is not the subject of your exclusive data rights, nor is it property "exclusively yours"; it may continue to be retained as long as it complies with laws and service necessity. If there are other provisions in laws or this platform's policies or if you make a substantiated request in accordance with the law, we will still handle it to the extent feasible.
+
+
+## 10. Policy updates, contact information and data controller
+
+- **Data controller/responsible person for operation of this service**: CHUN YAO LIU
+
+- We may revise this policy due to changes in laws, supervision, or the functionality of this service; if there are any major changes, we will notify you in an appropriate manner within the app. Please check it regularly.
+
+- **Contact channels**: For questions about interpreting this Policy or exercising personal‑data requests (review, rectify, constrain, oppose, deletion, etc.), please start with Member center → "Message the developer / report an issue"; we aim to prioritise replies inside the App within a commercially reasonable timeframe. You may also email japanreceipthelper@gmail.com — please hint at privacy context in subjects or bodies. Developer contacts shown on storefront product pages follow each marketplace’s norms.
+
+
+---
+
+## Contact information and email
+
+**Public contact email (privacy and personal information issues):**
+
+japanreceipthelper@gmail.com
+
+Member center → “Message the developer / report an issue” is the preferred channel; for privacy‑related matters you may also write to japanreceipthelper@gmail.com.
